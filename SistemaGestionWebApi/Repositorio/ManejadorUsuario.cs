@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaGestionWebApi.Repositorio
-{ 
+{
     internal static class ManejadorUsuario
     {
         public static string cadenaConexion = "Data Source=DESKTOP-U9SILR3;Initial Catalog=SistemaGestion;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
@@ -35,6 +35,7 @@ namespace SistemaGestionWebApi.Repositorio
             }
             return usuario;
         }
+
         public static Usuario Login(string nombreUsuario, string contraseña)
         {
             Usuario usuario = new Usuario();
@@ -65,8 +66,24 @@ namespace SistemaGestionWebApi.Repositorio
                     Console.WriteLine("El usuario y la contraseña introducidas no son correctas.");
                     return null;
                 }
+            }
+        }
+        public static int ActualizarUsuario(Usuario usuario, long id)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                    SqlCommand comando = new("UPDATE Usuario SET nombre = @nombre, apellido = @apellido, nombreUsuario = @nombreUsuario, contraseña = @contraseña, mail = @mail WHERE id = @id", connection);
+                    comando.Parameters.AddWithValue("@id", id)
+                    comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                    comando.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                    comando.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
+                    comando.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
+                    comando.Parameters.AddWithValue("@mail", usuario.Mail);
 
+                    connection.Open();
+                    return comando.ExecuteNonQuery();
             }
         }
     }
+    
 }

@@ -61,7 +61,6 @@ namespace SistemaGestionWebApi.Repositorio
                     producto.IdUsuario = reader.GetInt64(5);
                 }
             }
-
             return producto;
         }
         public static int InsertarProducto(Producto producto)
@@ -107,9 +106,36 @@ namespace SistemaGestionWebApi.Repositorio
 
                 }
             }
-
             return productos;
         }
-    }    
+
+        public static int BorrarProducto(long id)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("DELETE FROM Producto WHERE id = @id", connection);
+                comando.Parameters.AddWithValue("@id", id)
+                connection.Open();
+                return comando.ExecuteNonQuery();
+            }
+        }
+
+        public static int ActualizarProducto(Producto producto, long id)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("UPDATE Producto SET descripciones = @descripciones, costo = @costo, precioVenta = @precioVenta, stock = @stock, idUsuario = @idUsuario WHERE id = @id", connection);
+                comando.Parameters.AddWithValue("@id", id)
+                comando.Parameters.AddWithValue("@descripciones", producto.Descripciones);
+                comando.Parameters.AddWithValue("@costo", producto.Costo);
+                comando.Parameters.AddWithValue("@precioVenta", producto.PrecioVenta);
+                comando.Parameters.AddWithValue("@stock", producto.Stock);
+                comando.Parameters.AddWithValue("@idUsuario", producto.IdUsuario);
+
+                connection.Open();
+                return comando.ExecuteNonQuery();
+            }
+        }
+    }
 }
 

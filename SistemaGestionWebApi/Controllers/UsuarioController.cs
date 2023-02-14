@@ -14,5 +14,11 @@ namespace SistemaGestionWebApi.Controllers
         {
             return ManejadorUsuario.Login(usuario, contraseña);
         }
-    }
+
+        [HttpPut("{id}")]
+        public string ActualizarUsuario(Usuario usuario, long id)
+        {
+            return ManejadorUsuario.ActualizarUsuario(usuario, id) == 1 ? "Actualizado" : "No se pudo actualizar";
+        }
+    } 
 }
