@@ -24,4 +24,3 @@ namespace SistemaGestionWebApi.Controllers
 }
 
 
-

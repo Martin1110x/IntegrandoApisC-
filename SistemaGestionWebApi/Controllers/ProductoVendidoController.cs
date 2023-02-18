@@ -9,5 +9,6 @@ namespace SistemaGestionWebApi.Controllers
     [ApiController]
     public class ProductoVendidoController : ControllerBase
     {
+
     }
 }

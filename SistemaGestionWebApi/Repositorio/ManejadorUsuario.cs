@@ -73,7 +73,7 @@ namespace SistemaGestionWebApi.Repositorio
             using (SqlConnection connection = new(cadenaConexion))
             {
                     SqlCommand comando = new("UPDATE Usuario SET nombre = @nombre, apellido = @apellido, nombreUsuario = @nombreUsuario, contraseña = @contraseña, mail = @mail WHERE id = @id", connection);
-                    comando.Parameters.AddWithValue("@id", id)
+                    comando.Parameters.AddWithValue("@id", id);
                     comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
                     comando.Parameters.AddWithValue("@apellido", usuario.Apellido);
                     comando.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);

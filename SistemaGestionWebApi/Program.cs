@@ -1,4 +1,3 @@
-from Modelos import *
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,4 +24,3 @@ app.MapControllers();
 
 app.Run();
 
-Producto producto1 = Producto()

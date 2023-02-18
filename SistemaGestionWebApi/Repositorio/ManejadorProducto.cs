@@ -114,7 +114,7 @@ namespace SistemaGestionWebApi.Repositorio
             using (SqlConnection connection = new(cadenaConexion))
             {
                 SqlCommand comando = new("DELETE FROM Producto WHERE id = @id", connection);
-                comando.Parameters.AddWithValue("@id", id)
+                comando.Parameters.AddWithValue("@id", id);
                 connection.Open();
                 return comando.ExecuteNonQuery();
             }
@@ -125,7 +125,7 @@ namespace SistemaGestionWebApi.Repositorio
             using (SqlConnection connection = new(cadenaConexion))
             {
                 SqlCommand comando = new("UPDATE Producto SET descripciones = @descripciones, costo = @costo, precioVenta = @precioVenta, stock = @stock, idUsuario = @idUsuario WHERE id = @id", connection);
-                comando.Parameters.AddWithValue("@id", id)
+                comando.Parameters.AddWithValue("@id", id);
                 comando.Parameters.AddWithValue("@descripciones", producto.Descripciones);
                 comando.Parameters.AddWithValue("@costo", producto.Costo);
                 comando.Parameters.AddWithValue("@precioVenta", producto.PrecioVenta);
