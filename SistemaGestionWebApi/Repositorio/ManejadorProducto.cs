@@ -120,12 +120,12 @@ namespace SistemaGestionWebApi.Repositorio
             }
         }
 
-        public static int ActualizarProducto(Producto producto, long id)
+        public static int ActualizarProducto(Producto producto)
         {
             using (SqlConnection connection = new(cadenaConexion))
             {
                 SqlCommand comando = new("UPDATE Producto SET descripciones = @descripciones, costo = @costo, precioVenta = @precioVenta, stock = @stock, idUsuario = @idUsuario WHERE id = @id", connection);
-                comando.Parameters.AddWithValue("@id", id);
+                comando.Parameters.AddWithValue("@id", producto.Id);
                 comando.Parameters.AddWithValue("@descripciones", producto.Descripciones);
                 comando.Parameters.AddWithValue("@costo", producto.Costo);
                 comando.Parameters.AddWithValue("@precioVenta", producto.PrecioVenta);
