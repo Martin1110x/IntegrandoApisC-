@@ -5,8 +5,8 @@ using SistemaGestionWebApi.Repositorio;
 
 namespace SistemaGestionWebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
         [HttpGet("{usuario}/{contraseña}")]

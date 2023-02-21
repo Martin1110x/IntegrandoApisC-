@@ -1,5 +1,6 @@
 using SistemaGestionWebApi.Controllers;
 using SistemaGestionWebApi.Modelos;
+using SistemaGestionWebApi.Repositorio;
 
 internal class Program
 {

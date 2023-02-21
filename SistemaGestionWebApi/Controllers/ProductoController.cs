@@ -5,8 +5,8 @@ using SistemaGestionWebApi.Repositorio;
 
 namespace SistemaGestionWebApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class ProductoController : ControllerBase
     {
         [HttpPost]
