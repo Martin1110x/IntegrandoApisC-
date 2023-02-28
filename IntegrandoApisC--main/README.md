@@ -1,2 +1,0 @@
-# IntegrandoApisC-
-Entregable CoderHouse
