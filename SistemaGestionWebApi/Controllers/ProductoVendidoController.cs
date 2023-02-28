@@ -9,7 +9,7 @@ namespace SistemaGestionWebApi.Controllers
     [Route("api/[controller]")]
     public class ProductoVendidoController : ControllerBase
     {
-        [HttpGet("{idUsuario}")] //Checkear
+        [HttpGet("{idUsuario}")] 
         public List<ProductoVendido> ObtenerProductoVendido(long idUsuario)
         {
             return ManejadorProductoVendido.ObtenerProductoVendidoUsuario(idUsuario);

@@ -44,7 +44,7 @@ namespace SistemaGestionWebApi.Repositorio
             List<ProductoVendido> productosVendidos = new();
             using (SqlConnection connection = new(cadenaConexion))
             {
-                SqlCommand comando = new("SELECT * FROM ProductoVendido INNER JOIN Venta ON ProductoVendido.IdVenta = @idUsuario", connection);
+                SqlCommand comando = new("SELECT * FROM ProductoVendido where IdVenta = @idUsuario", connection);
                 comando.Parameters.AddWithValue("@idUsuario", idUsuario);
 
                 connection.Open();
@@ -63,7 +63,6 @@ namespace SistemaGestionWebApi.Repositorio
 
                 }
             }
-
             return productosVendidos;
         }
     }

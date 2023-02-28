@@ -9,7 +9,7 @@ namespace SistemaGestionWebApi.Controllers
     [Route("api/[controller]")]
     public class VentaController : ControllerBase
     {
-        [HttpPost("{idUsuario}")] //checkear
+        [HttpPost("{idUsuario}")] 
         public Venta InsertarVenta(Venta venta)
         {
             ManejadorVenta.InsertarVenta(venta);
