@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using RestSharp;
 using SistemaGestionWebApi.Modelos;
 
 namespace SistemaGestionWebApi.Controllers

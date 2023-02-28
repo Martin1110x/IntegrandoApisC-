@@ -39,6 +39,7 @@ internal class Program
         producto_1.Stock = 40;
         producto_1.IdUsuario = 2;
 
+        /*
         //Agregar producto.
 
         ProductoController.InsertarProducto(producto_1); 
@@ -48,9 +49,9 @@ internal class Program
         producto_1.PrecioVenta = 8000;
         ProductoController.ActualizarProducto(producto_1); 
 
-        //Eliminar producto.
+        Eliminar producto.
 
-        ProductoController.BorrarProducto(7); 
+       ProductoController.BorrarProducto(7); 
 
         //Modificar usuario.
         
@@ -58,6 +59,6 @@ internal class Program
         usuario_1 = UsuarioController.ObtenerUsuario(3);
         usuario_1.Contraseña = "NuevaContraseña1234";
 
-        UsuarioController.ActualizarUsuario(usuario_1, 3); 
+        UsuarioController.ActualizarUsuario(usuario_1, 3); */
     }
 }

@@ -13,7 +13,6 @@ C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\Siste
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\SistemaGestionWebApi.dll
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\SistemaGestionWebApi.pdb
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\RestSharp.dll
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\MARTIN\Desktop\CoderHouseC#\SistemaGestionWebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
