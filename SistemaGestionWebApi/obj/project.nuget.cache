@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jS6wCk4qSGLlpPqEClFEEs3mtdzE/ov8Gi1XxCAh2i/HE/rJPL7KbSuYpV2Rqt9qqcuOT7aflEmspf/+ezn2CA==",
+  "dgSpecHash": "rtws/Y67oPsWKxAvMp/GEoFMZWoUyHSXOWiTEiQ6NGGFRo917D7NlK7HwBxXf3VRJ5lONZrkpqz8ypilCQyOsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
+  "projectFilePath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\IntegrandoApisC--main\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MARTIN\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\MARTIN\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

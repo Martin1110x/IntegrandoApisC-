@@ -37,5 +37,18 @@ namespace SistemaGestionWebApi.Repositorio
 
             return ventas;
         }
+        public static int InsertarVenta(Venta venta)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("INSERT INTO Venta(Comentarios, IdUsuario)" +
+                    "VALUES(@comentarios, @idUsuario)", connection);
+                comando.Parameters.AddWithValue("@comentarios", venta.Comentarios);
+                comando.Parameters.AddWithValue("@idUsuario", venta.IdUsuario);
+
+                connection.Open();
+                return comando.ExecuteNonQuery();
+            }
+        }
     }
 }

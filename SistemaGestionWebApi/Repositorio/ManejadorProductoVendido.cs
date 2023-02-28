@@ -39,6 +39,33 @@ namespace SistemaGestionWebApi.Repositorio
 
             return productosVendidos;
         }
+        public static List<ProductoVendido> ObtenerProductoVendidoUsuario(long idUsuario)
+        {
+            List<ProductoVendido> productosVendidos = new();
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("SELECT * FROM ProductoVendido INNER JOIN Venta ON ProductoVendido.IdVenta = @idUsuario", connection);
+                comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                connection.Open();
+                SqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ProductoVendido ProductoVendidoTemporal = new ProductoVendido();
+                        ProductoVendidoTemporal.Id = reader.GetInt64(0);
+                        ProductoVendidoTemporal.Stock = reader.GetInt32(1);
+                        ProductoVendidoTemporal.IdProducto = reader.GetInt64(2);
+                        ProductoVendidoTemporal.IdVenta= reader.GetInt64(3);
+                        productosVendidos.Add(ProductoVendidoTemporal);
+                    }
+
+                }
+            }
+
+            return productosVendidos;
+        }
     }
 }
 

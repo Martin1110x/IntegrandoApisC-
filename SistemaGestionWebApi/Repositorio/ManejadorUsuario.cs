@@ -84,6 +84,34 @@ namespace SistemaGestionWebApi.Repositorio
                     return comando.ExecuteNonQuery();
             }
         }
+
+        public static int InsertarUsuario(Usuario usuario)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("INSERT INTO Usuario(Nombre, Apellido, NombreUsuario, Contraseña, Mail)" +
+                    "VALUES(@nombre, @apellido, @nombreUsuario, @contraseña, @mail)", connection);
+                comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
+                comando.Parameters.AddWithValue("@apellido", usuario.Apellido);
+                comando.Parameters.AddWithValue("@nombreUsuario", usuario.NombreUsuario);
+                comando.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
+                comando.Parameters.AddWithValue("@mail", usuario.Mail);
+
+                connection.Open();
+                return comando.ExecuteNonQuery();
+            }
+        }
+        public static int BorrarUsuario(long id)
+        {
+            using (SqlConnection connection = new(cadenaConexion))
+            {
+                SqlCommand comando = new("DELETE FROM Usuario WHERE id = @id", connection);
+                comando.Parameters.AddWithValue("@id", id);
+                connection.Open();
+                return comando.ExecuteNonQuery();
+            }
+        }
     }
+
     
 }

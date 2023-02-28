@@ -901,11 +901,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\IntegrandoApisC--main\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
       "projectName": "SistemaGestionWebApi",
-      "projectPath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
+      "projectPath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\IntegrandoApisC--main\\SistemaGestionWebApi\\SistemaGestionWebApi.csproj",
       "packagesPath": "C:\\Users\\MARTIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\SistemaGestionWebApi\\obj\\",
+      "outputPath": "C:\\Users\\MARTIN\\Desktop\\CoderHouseC#\\IntegrandoApisC--main\\SistemaGestionWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MARTIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

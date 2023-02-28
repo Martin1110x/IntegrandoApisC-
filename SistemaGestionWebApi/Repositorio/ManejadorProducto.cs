@@ -79,13 +79,13 @@ namespace SistemaGestionWebApi.Repositorio
                 return comando.ExecuteNonQuery();
             }
         }
-        public static List<Producto> ObtenerProductosUsuario(long id)
+        public static List<Producto> ObtenerProductosUsuario(long idUsuario)
         {
             List<Producto> productos = new();
             using (SqlConnection connection = new(cadenaConexion))
             {
-                SqlCommand comando = new("SELECT * FROM Producto WHERE IdUsuario = @id", connection);
-                comando.Parameters.AddWithValue("@id", id);
+                SqlCommand comando = new("SELECT * FROM Producto WHERE IdUsuario = @idUsuario", connection);
+                comando.Parameters.AddWithValue("@id", idUsuario);
 
                 connection.Open();
                 SqlDataReader reader = comando.ExecuteReader();
